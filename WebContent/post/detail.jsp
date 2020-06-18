@@ -13,10 +13,9 @@
    
 </header>
     <hr/>
-    <nav>
-         <a href="/apple/member?cmd=LoginForm">로그인</a>
-         <a href="/apple/member?cmd=JoinForm">회원가입</a> 
-    </nav>
+    
+        <%@include file="../include/nav.jsp" %>
+   
     <section>
         <table border="1">
            <tr>

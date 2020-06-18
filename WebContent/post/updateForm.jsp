@@ -4,25 +4,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>글쓰기 페이지</title>
+<title>글수정 페이지</title>
  <link rel="stylesheet" href="/apple/static/css/style.css"/>
 </head>
 <body>
 <header>
-    <h1>글쓰기 페이지</h1>
+    <h1>글수정 페이지</h1>
    
 </header>
     <hr/>
-    <nav>
-         <a href="/apple/member?cmd=loginForm">로그인</a>
-         <a href="/apple/member?cmd=joinForm">회원가입</a> 
-    </nav>
+    
+       <%@include file="../include/nav.jsp" %>
+   
     <section>
         <form action="/apple/post?cmd=saveProc" method="post">
         <table border="1">
            <tr>
                 <th>제목</th>             
-                <td><input type="text" name="title"/></td>                
+                <td><input value="제목입니다.넣기"type="text" name="title"/></td>                
               
            </tr>
            <tr>

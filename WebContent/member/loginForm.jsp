@@ -4,21 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입 페이지</title>
+<title>로그인 페이지</title>
  <link rel="stylesheet" href="/apple/static/css/style.css"/>
 </head>
 <body>
 <header>
-    <h1>회원가입 페이지</h1>
+    <h1>로그인 페이지</h1>
    
 </header>
     <hr/>
-    <nav>
-         <a href="/apple/member?cmd=loginForm">로그인</a>
-         <a href="/apple/member?cmd=joinForm">회원가입</a> 
-    </nav>
+   
+  			<%@include file="../include/nav.jsp" %> 
+  
     <section>
-        <form action="/apple/post?cmd=joinProc" method="post">
+        <form action="/apple/post?cmd=loginProc" method="post">
         <table border="1">
            <tr>
                 <th>유저네임</th>             
@@ -31,10 +30,11 @@
            </tr> 
            <tr>
                 <th>이메일</th>
-                <td><input type="email" name="email"/></td>
-           </tr>                
+                <td><input value="이메일넣기" type="email" name="email"/></td>
+           </tr> 
+                  
         </table>
-        <button>글쓰기완료</button>
+        <button>로그인</button>
        </form>  
     </section>
     <footer>
