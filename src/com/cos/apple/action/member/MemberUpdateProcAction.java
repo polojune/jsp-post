@@ -22,7 +22,7 @@ public class MemberUpdateProcAction implements Action {
 		    MemberDao memberDao = new MemberDao(); 
 		    int result = memberDao.회원수정(id,username, password, email);
 		    
-		    System.out.println("result:" + result);
+		   
 		    if(result == 1) { 
 		    	Member principal = memberDao.회원찾기(id);
    	    	    HttpSession session = request.getSession(); 
