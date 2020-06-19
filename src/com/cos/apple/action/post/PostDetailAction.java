@@ -1,7 +1,7 @@
 package com.cos.apple.action.post;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.cos.apple.action.Action;
 import com.cos.apple.dao.PostDao;
 import com.cos.apple.dto.PostResponseDto;
-import com.cos.apple.model.Post;
+
 
 public class PostDetailAction implements Action {
 	@Override

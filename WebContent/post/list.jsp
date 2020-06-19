@@ -25,12 +25,12 @@
 		<c:forEach var="post" items="${posts}">
 		<tr>
 			<td>${post.id}</td>
-			<td><a href="/apple/post?cmd=detail&id=${post.id }">${post.title}</a></td>
+			<td><a href="/apple/post?cmd=detail&id=${post.id}">${post.title}</a></td>
 			<td>${post.createDate}</td>
 		</tr>
 		</c:forEach>
 	</table>
-	글쓰기
+     <a href="/apple/post?cmd=saveForm">글쓰기</a>
 </section>
 <footer>
 	<p>Created By Apple.</p>

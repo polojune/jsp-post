@@ -17,6 +17,53 @@ public class PostDao {
 	private ResultSet rs;
    	
  
+	public Post 글가져오기(int id) {
+		try {
+			String sql = "SELECT * FROM post WHERE id=? ";
+			conn = DBConn.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, id);	
+			rs =  pstmt.executeQuery();
+			
+			if(rs.next()) {
+			  Post post = Post.builder() 
+					.id(rs.getInt("id"))
+					.memberId(rs.getInt("memberId"))
+					.title(rs.getString("title"))
+					.content(rs.getString("content"))
+					.createDate(rs.getTimestamp("createDate"))
+					.build();
+			
+			  return post;
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+   
+	public int 글수정(int id,String title, String content) {
+		try {
+			String sql = "UPDATE post SET title = ?, content = ? WHERE id = ?";
+			conn = DBConn.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			
+			pstmt.setString(1, title);
+			pstmt.setString(2, content);
+			pstmt.setInt(3, id);
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	
+}
+	
 	public PostResponseDto 상세보기(int id) {
 		StringBuilder sb = new StringBuilder(); 
 		sb.append("SELECT p.id , p.memberId, p.title,p.content,p.createDate,m.username ");
