@@ -17,7 +17,7 @@
         <%@include file="../include/nav.jsp" %> 
    
     <section>
-        <form action="/apple/post?cmd=updateForm" method="post">
+        <form action="/apple/member?cmd=updateForm" method="post">
         <table border="1">
            <tr>
                 <th>유저네임</th>             
