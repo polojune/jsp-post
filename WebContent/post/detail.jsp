@@ -33,7 +33,7 @@
                <td>${postDetail.post.title}</td>
                <td>${postDetail.post.content}</td>
                <td><a href="/apple/post?cmd=updateForm&id=${postDetail.post.id}">수정</a></td>
-               <td><a href="/apple/post?cmd=deleteProc&id=1">삭제</a></td>
+               <td><a href="/apple/post?cmd=deleteProc&id=${postDetail.post.id}">삭제</a></td>
            </tr>         
         </table>
     </section>

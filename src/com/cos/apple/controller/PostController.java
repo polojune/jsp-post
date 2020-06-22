@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cos.apple.action.Action;
+import com.cos.apple.action.post.PostDeleteProcAction;
 import com.cos.apple.action.post.PostDetailAction;
 import com.cos.apple.action.post.PostListAction;
 import com.cos.apple.action.post.PostSaveFormAction;
@@ -61,6 +62,8 @@ public class PostController extends HttpServlet {
 			return new PostUpdateFormAction();
 		}else if (cmd.equals("updateProc")) {
 			return new PostUpdateProcAction();
+		}else if (cmd.equals("deleteProc")) {
+			return new PostDeleteProcAction();
 		}
 		return null;
 	}

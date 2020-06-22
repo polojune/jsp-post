@@ -20,7 +20,7 @@ public class PostListAction implements Action {
 		List<Post> posts = postDao.글목록();
 		request.setAttribute("posts", posts);
         
-		System.out.println("posts:"+ posts);
+		
 		RequestDispatcher dis = request.getRequestDispatcher("post/list.jsp");
 		dis.forward(request, response);
 
